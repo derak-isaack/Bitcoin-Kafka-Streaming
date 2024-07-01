@@ -11,7 +11,7 @@ Filter and transform the streaming data to only include the top ten ranked Bitco
 
 ## <div style="padding: 20px;color:white;margin:10;font-size:90%;text-align:left;display:fill;border-radius:10px;overflow:hidden;background-image: url(https://w0.peakpx.com/wallpaper/957/661/HD-wallpaper-white-marble-white-stone-texture-marble-stone-background-white-stone.jpg)"><b><span style='color:black'> Producer</span></b> </div>
 
-The producer uses the `CoinCap API` to extract bitcoin prices on a one minute interval then later publishes the data to a `Kafka topic` for subscription by the consumer. 
+The producer uses the `CoinCap API` to extract bitcoin prices on a one minute interval then later publishes the data to a `Kafka topic` for subscription by the consumer. The producer can be found [here](producer.py)
 
 Before data is ingeted into the kafka-topics, it is essential to change the data types from string to their respective data types for easier process of analysis and filtering of streaming data.
 
