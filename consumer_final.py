@@ -15,7 +15,7 @@ def main():
         consumer.subscribe(["Crypto-data"])
         
         while True:
-            #Set the poll to 30 seconds to wait for a new message from the consumer. 
+            #Set the poll to 30 seconds to wait for a new message from the producer. 
             msg = consumer.poll(30)
             
             if msg is None:
