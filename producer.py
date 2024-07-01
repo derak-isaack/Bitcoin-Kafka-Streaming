@@ -15,17 +15,9 @@ def get_flights_data():
         }
 
     resp = requests.get(url, headers)
-    # print(resp.json().keys())
-    # print(resp.json()['data'][0].keys())
     data = resp.json()
         
-    #         # Get the first item in the 'data' array to inspect its keys and value types
-    # first_item = data['data'][0]
-            
-    #         # Print keys and their corresponding value types
-    # for key, value in first_item.items():
-    #     value_type = type(value).__name__
-    #     print(f"Key: {key}, Value Type: {value_type}")
+    
     for item in data['data']:
             # Convert numeric fields to appropriate types
             item['rank'] = int(item['rank'])
@@ -39,18 +31,6 @@ def get_flights_data():
             
     return data
     
-    # Print the first item's keys and their updated types
-# first_item = data['data'][0]
-# for key, value in first_item.items():
-#         value_type = type(value).__name__
-#         print(f"Key: {key}, Value Type: {value_type}")
-
-# resp2 = resp.json()
-    # resp2 = resp.json()
-    # resp3 = pd.json_normalize(resp2, record_path='data')
-
-# data = get_flights_data()
-# data2 = data.
 
 #Define the main function to start the kafka application.
 def main():
